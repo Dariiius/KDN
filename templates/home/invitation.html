@@ -24,10 +24,10 @@
         <div class="content-wrapper">
             <div class="content-cover"></div>
             <div class="content">
-                <img id="content-bg-teddy-1" src="{% static 'images/teddy-1.png' %}">
-                <img id="content-bg-teddy-2" src="{% static 'images/teddy-2.png' %}">
-                <img id="content-bg-teddy-3" src="{% static 'images/teddy-3.png' %}">
-                <img id="content-bg-paw-2" src="{% static 'images/paw.png' %}">
+                <img id="content-bg-teddy-1" src="{{S3_URL}}images/teddy-1.png">
+                <img id="content-bg-teddy-2" src="{{S3_URL}}images/teddy-2.png">
+                <img id="content-bg-teddy-3" src="{{S3_URL}}images/teddy-3.png">
+                <img id="content-bg-paw-2" src="{{S3_URL}}images/paw.png">
                 <div>
                     <div class="content-details">
                         <h2 id="header">a bear-y exciting birthday</h2>
@@ -50,7 +50,7 @@
         </div>
         <div class="panel left">
             <div class="ribbon"></div>
-            <img class="teddy" src="{% static 'images/teddy-front.png' %}">
+            <img class="teddy" src="{{S3_URL}}images/teddy-front.png">
         </div>
     </div>
 
