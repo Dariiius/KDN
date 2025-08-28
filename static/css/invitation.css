@@ -209,7 +209,8 @@ body {
   left: 0;
   transform-origin: left;
   transition: transform 1s;
-  background-image: url('../images/open-left.png');
+  /* background-image: url('../images/open-left.png'); */
+  background-image: url('https://kaiden-staticfiles.s3.ap-southeast-2.amazonaws.com/images/open-left.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -220,7 +221,8 @@ body {
   right: 0;
   transform-origin: right;
   transition: transform 1s;
-  background-image: url('../images/open-right.png');
+  /* background-image: url('../images/open-right.png'); */
+  background-image: url('https://kaiden-staticfiles.s3.ap-southeast-2.amazonaws.com/images/open-right.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -290,7 +292,8 @@ body {
   width: 350px;
   height: 350px;
   border-radius: 100%;
-  background-image: url('../images/profile.jpg');
+  /* background-image: url('../images/profile.jpg'); */
+  background-image: url('https://kaiden-staticfiles.s3.ap-southeast-2.amazonaws.com/images/profile.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -100px !important;
