@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>KA1DEN | You are invited!</title>
+    <link rel="stylesheet" href="{% static 'css/invitation.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Delius+Unicase:wght@400;700&family=Righteous&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="loader-wrapper">
+        <div>
+            <span>KA</span><span class="loader"></span><span>DEN</span>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="content-wrapper">
+            <div class="content-cover"></div>
+            <div class="content">
+                <img id="content-bg-teddy-1" src="{% static 'images/teddy-1.png' %}">
+                <img id="content-bg-teddy-2" src="{% static 'images/teddy-2.png' %}">
+                <img id="content-bg-teddy-3" src="{% static 'images/teddy-3.png' %}">
+                <img id="content-bg-paw-2" src="{% static 'images/paw.png' %}">
+                <div>
+                    <div class="content-details">
+                        <h2 id="header">a bear-y exciting birthday</h2>
+                        <div class="image"></div>
+                        <h1 id="name">KAIDEN ZYPH</h1>
+                        <h3 class="subheader">IS TURNING ONE!</h3>
+                        <div class="details">
+                            <h5>Join us on Sunday, 7th of September at 11AM</h5>
+                            <h5>Basilio's Events Place, Prk. 4 San Miguel, Tagum</h5>
+                        </div>
+                        <div class="full-width-center">
+                            <button id="btn-rsvp">RSVP</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel right">
+            <div class="ribbon"></div>
+        </div>
+        <div class="panel left">
+            <div class="ribbon"></div>
+            <img class="teddy" src="{% static 'images/teddy-front.png' %}">
+        </div>
+    </div>
+
+    <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'js/circletype.js' %}"></script>
+    <script src="{% static 'js/invitation.js' %}"></script>
+</body>
+
+</html>
