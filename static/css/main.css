@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* scrollbar-width: none;      
+  -ms-overflow-style: none;   
+  overflow: auto; */
+}
+
+body::-webkit-scrollbar {
+  display: none;               
+}
+
+.first {
+  background: #FFF6E5;
+  background-image: url('../images/bg-first.jpg');
+}
+
+.second {
+  background: #F5E4C3;
+  background-image: url('../images/bg-first.jpg');
+}
+
+.third {
+  background: #EED5B7;
+  background-image: url('../images/bg-first.jpg');
+}
+
+.fourth {
+  background: #FAECD6;
+}
+
+.fifth {
+  background: #EFE1D1;
+}
+
+.sixth {
+  background: #E4C9B0;
+}
+
+.seventh {
+  background: #D3BFAA;
+}
+
+.eighth {
+  background: #DBC1AC;
+}
+
+.ninth {
+  background: #CBB79D;
+}
+
+.tenth {
+  background: #C9A886;
+}
+
+.eleventh {
+  background: #D8CAB8;
+}
+
+.twelfth {
+  background: #BCA18A;
+}
+
+/* .panel {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  visibility: hidden;
+}
+
+.panel .outer, .panel .inner {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.panel .bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section-heading {
+  font-size: 8em;
+} */
+
+.panel {
+  height: 100vh;
+  top: 0;
+  will-change: transform;
+}
+
+.box {
+  position: absolute;
+  z-index: 100;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.b {
+  width: 200px;
+  height: 200px;
+  left: -175px;
+  top: 500px;
+  background-image: url('../images/teddy.png');
+}
+
+.c {
+  width: 400px;
+  height: 400px;
+  left: -1000;
+  top: 800px;
+  background-image: url('../images/teddy2.png');
+  filter: drop-shadow(11px 10px 11px rgba(0, 0, 0, 0.5));
+}
