@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Blueberry";
+  src:
+    url("/static/fonts/Blueberry.ttf") format("truetype");  /* last resort */
+}
+
 * {
   box-sizing: border-box;
 }
@@ -166,9 +172,10 @@ body {
   align-items: center;
   font-size: 1em;
   position: relative;
+  z-index: 2;
 }
 
-.content > div {
+.content > div, .content-page-2 > div {
   border: 4px solid #6c3c2c;
   width: 100%;
   height: 100%;
@@ -182,11 +189,25 @@ body {
   width: 95%;
   top: 2.5%;
   left: 2.5%;
-  z-index: 1;
+  z-index: 3;
   background: linear-gradient(45deg, transparent 49%, #dedede 49% 51%, transparent 51%) , linear-gradient(-45deg, transparent 49%, #dedede 49% 51%, transparent 51%);
   background-size: 2em 2em;
   background-color: #ffffff;
   opacity: 1;
+}
+
+.content-page-2 {
+  position: absolute;
+  height: 95%;
+  width: 95%;
+  top: 2.5%;
+  left: 2.5%;
+  z-index: 1;
+  padding: 1em;
+  background-color: #ffffff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .content-details {
@@ -201,7 +222,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  z-index: 2;
+  z-index: 4;
 }
 
 .panel.left {
@@ -277,15 +298,16 @@ body {
 }
 
 .subheader {
-  font-family: "Comfortaa", sans-serif;
+  font-family: "Blueberry";
   font-weight: 600;
   font-style: normal;
-  font-size: 2em;
+  font-size: 1.7em;
   margin-top: unset;
   margin-bottom: unset;
   text-align: center;
   letter-spacing: .2em;
   text-indent: .2em;
+  color: #6c3c2c;
 }
 
 .image {
@@ -297,6 +319,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -100px !important;
+  border: 0.8em solid #ceb8a8;
 }
 
 #name {
@@ -330,11 +353,11 @@ body {
   font-family: "Comfortaa", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-size: 1.1em;
+  font-size: 1em;
   letter-spacing: .15em;
   text-align: center;
   margin-top: 2em !important;
-  text-transform: uppercase;
+  color: #6d6c6c;
 }
 
 #content-bg-teddy-1 { 
@@ -361,6 +384,11 @@ body {
   bottom: -1.17em;
 }
 
+#content-bg-teddy-4 { 
+  width: 100%;
+  max-width: 250px;
+}
+
 #content-bg-paw {
   position: absolute;
   width: 100%;
@@ -379,9 +407,51 @@ body {
   transform: rotate(333deg);
 }
 
+#content-bg-star-1 {
+  position: absolute;
+  width: 100%;
+  max-width: 50px;
+  top: 13%;
+  right: 15%;
+  transform: rotate(17deg);
+}
+
+#content-bg-star-2 {
+  position: absolute;
+  width: 100%;
+  max-width: 40px;
+  top: 30%;
+  left: 18%;
+  transform: rotate(30deg);
+}
+
+#content-bg-circle-1 {
+  position: absolute;
+  width: 100%;
+  max-width: 40px;
+  bottom: 30%;
+  right: 15%;
+}
+
+#content-bg-circle-2 {
+  position: absolute;
+  width: 100%;
+  max-width: 25px;
+  top: 50%;
+  left: 25%;
+}
+
+#content-bg-circle-3 {
+  position: absolute;
+  width: 100%;
+  max-width: 45px;
+  top: 30%;
+  right: 20%;
+}
 
 /* Button */
-#btn-rsvp {
+.btn-pagination {
+  font-family: "Comfortaa", sans-serif;
   background-color: #fbeee0;
   border: 2px solid #422800;
   border-radius: 30px;
@@ -389,7 +459,7 @@ body {
   color: #422800;
   cursor: pointer;
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 18px;
   padding: 0 18px;
   line-height: 50px;
@@ -398,21 +468,22 @@ body {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  letter-spacing: 0.5em;
-  text-indent: 0.5em;
+  letter-spacing: 0.1em;
+  text-indent: 0.1em;
+  -webkit-tap-highlight-color: transparent;
 }
 
-#btn-rsvp:hover {
+.btn-pagination:hover {
   background-color: #fff;
 }
 
-#btn-rsvp:active {
+.btn-pagination:active {
   box-shadow: #422800 2px 2px 0 0;
   transform: translate(2px, 2px);
 }
 
 @media (min-width: 768px) {
-  #btn-rsvp {
+  .btn-pagination {
     min-width: 120px;
     padding: 0 25px;
   }
@@ -424,4 +495,80 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 2em !important;
+}
+
+.colored-text {
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: .2em 1em;
+}
+
+#light-blue {
+  color: #ffffff;
+  border-right: 1px solid #afafaf;
+  text-shadow: 0.000em 0.075em #72bdec, 
+              0.029em 0.069em #72bdec, 
+              0.053em 0.053em #72bdec, 
+              0.069em 0.029em #72bdec, 
+              0.075em 0.000em #72bdec, 
+              0.069em -0.029em #72bdec, 
+              0.053em -0.053em #72bdec, 
+              0.029em -0.069em #72bdec, 
+              0.000em -0.075em #72bdec, 
+              -0.029em -0.069em #72bdec, 
+              -0.053em -0.053em #72bdec, 
+              -0.069em -0.029em #72bdec, 
+              -0.075em -0.000em #72bdec, 
+              -0.069em 0.029em #72bdec, 
+              -0.053em 0.053em #72bdec, 
+              -0.029em 0.069em #72bdec;
+}
+
+#light-brown {
+  color: #ffffff;
+  border-right: 1px solid #afafaf;
+  text-shadow: 0.000em 0.075em #c4a07c, 
+              0.029em 0.069em #c4a07c, 
+              0.053em 0.053em #c4a07c, 
+              0.069em 0.029em #c4a07c, 
+              0.075em 0.000em #c4a07c, 
+              0.069em -0.029em #c4a07c, 
+              0.053em -0.053em #c4a07c, 
+              0.029em -0.069em #c4a07c, 
+              0.000em -0.075em #c4a07c, 
+              -0.029em -0.069em #c4a07c, 
+              -0.053em -0.053em #c4a07c, 
+              -0.069em -0.029em #c4a07c, 
+              -0.075em -0.000em #c4a07c, 
+              -0.069em 0.029em #c4a07c, 
+              -0.053em 0.053em #c4a07c, 
+              -0.029em 0.069em #c4a07c;
+}
+
+#white {
+  color: #ffffff;
+  text-shadow: 0.000em 0.075em #747474, 
+              0.029em 0.069em #747474, 
+              0.053em 0.053em #747474, 
+              0.069em 0.029em #747474, 
+              0.075em 0.000em #747474, 
+              0.069em -0.029em #747474, 
+              0.053em -0.053em #747474, 
+              0.029em -0.069em #747474, 
+              0.000em -0.075em #747474, 
+              -0.029em -0.069em #747474, 
+              -0.053em -0.053em #747474, 
+              -0.069em -0.029em #747474, 
+              -0.075em -0.000em #747474, 
+              -0.069em 0.029em #747474, 
+              -0.053em 0.053em #747474, 
+              -0.029em 0.069em #747474;
+}
+
+.margin-bottom-2 {
+  margin-bottom: 2em;
+}
+
+.margin-top-2 {
+  margin-top: 2em;
 }
