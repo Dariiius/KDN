@@ -2,52 +2,54 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KA1DEN</title>
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link href="https://fonts.cdnfonts.com/css/termina-test" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <!-- <section class="panel">
-        <div class="outer">
-            <div class="inner">
-                <div class="bg first">
-                    <h1 class="section-heading">Panel One</h1>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="panel">
-        <div class="outer">
-            <div class="inner">
-                <div class="bg second">
-                    <h1 class="section-heading">Panel Two</h1>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="panel">
-        <div class="outer">
-            <div class="inner">
-                <div class="bg third">
-                    <h1 class="section-heading">Panel Three</h1>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <section class="panel first">
-        ONE
-        <div class="box b"></div>
-        <div class="box c"></div>
-    </section>
-    <section class="panel second">
-        TWO
-        <div class="box b"></div>
-        <div class="box c"></div>
-    </section>
-    <section class="panel third">
-        THREE
-    </section>
+    <h1 class="text">KAIDEN ZYPH</h1>
+    <h1 aria-hidden="true" class="text outline-text">KAIDEN ZYPH</h1>
+    <h1 aria-hidden="true" class="text filter-text">KAIDEN ZYPH</h1>
+    <h5 class="subtext">MONTHLY MILESTONE</h5>
+    <h5 class="subtext outline-text">MONTHLY MILESTONE</h5>
+    <h5 class="subtext filter-text">MONTHLY MILESTONE</h5>
+
+    <div id="wrapper">
+        <section id="content">
+            <section class="images">
+                <h5 class="section-title">New Born</h5>
+                <img data-speed="0.8" src="{{S3_URL}}images/ms/0-0.jpg">
+                <img data-speed="0.9" src="{{S3_URL}}images/ms/0-1.jpg">
+                <img data-speed="1" src="{{S3_URL}}images/ms/0-2.jpg">
+                <img data-speed="1.1" src="{{S3_URL}}images/ms/0-3.jpg">
+                <!-- 
+                <img data-speed="1.1"
+                    src="https://images.unsplash.com/photo-1589882265634-84f7eb9a3414?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=434&q=80"
+                    alt="">
+                <img data-speed="0.9"
+                    src="https://images.unsplash.com/photo-1514689832698-319d3bcac5d5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=434&q=80"
+                    alt="">
+                <img data-speed="1.2"
+                    src="https://images.unsplash.com/photo-1535207010348-71e47296838a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+                    alt="">
+                <img data-speed="0.8"
+                    src="https://images.unsplash.com/photo-1588007375246-3ee823ef4851?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fG5lb258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+                    alt="">
+                <img data-speed="1"
+                    src="https://images.unsplash.com/photo-1571450669798-fcb4c543f6a4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fG5lb258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+                    alt="">
+                <img data-speed="1"
+                    src="https://kaiden-staticfiles.s3.ap-southeast-2.amazonaws.com/images/profile.jpg?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fG5lb258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    alt=""> -->
+            </section>
+        </section>
+    </div>
 
     <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
     <script src="{% static 'js/gsap.min.js' %}"></script>
@@ -58,4 +60,5 @@
     <script src="{% static 'js/SplitText.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
 </body>
+
 </html>

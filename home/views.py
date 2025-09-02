@@ -4,7 +4,10 @@ from django.http import HttpResponse
 from ka1den.settings import S3_URL
 
 def index(request):
-    return render(request, 'home/index.html')
+    context = {
+        'S3_URL': S3_URL
+    }
+    return render(request, 'home/index.html', context)
 
 
 def invitation(request):
