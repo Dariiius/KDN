@@ -139,28 +139,32 @@ img {
   grid-area: 1/1/6/8;
 } */
 
+img:nth-child(1) {
+  grid-area: 1/1/6/8;
+}
+
 img:nth-child(2) {
-  grid-area: 7/1/16/9;
+  grid-area: 3/12/8/20;
 }
 
 img:nth-child(3) {
-  grid-area: 7/11/16/20;
+  grid-area: 9/5/13/15;
 }
 
 img:nth-child(4) {
-  grid-area: 14/2/20/8;
+  grid-area: 14/1/18/8;
 }
 
 img:nth-child(5) {
-  grid-area: 13/10/17/20;
+  grid-area: 16/12/20/19;
 }
 
 img:nth-child(6) {
-  grid-area: 24/1/29/13;
+  grid-area: 20/2/25/9;
 }
 
 img:nth-child(7) {
-  grid-area: 17/14/21/20;
+  grid-area: 22/11/24/20;
 }
 
 @media (min-width: 320px) {
