@@ -8,8 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KA1DEN</title>
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/photoswipe.css' %}">
     <link href="https://fonts.cdnfonts.com/css/termina-test" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -24,8 +25,15 @@
         <section id="content">
             <section class="images">
                 <!-- <h5 class="section-title">New Born</h5> -->
-                <img data-speed="0.8" src="{{S3_URL}}images/ms/0-0.jpg">
-                <img data-speed="0.9" src="{{S3_URL}}images/ms/0-1.jpg">
+                <a href="#" data-pswp-src="{{S3_URL}}images/ms/0-0.jpg" data-pswp-width="560"
+                    data-pswp-height="746.66" target="_blank" class="ms-image">
+                    <img data-speed="0.8" src="{{S3_URL}}images/ms/0-0.jpg">
+                </a>
+                <a href="{{S3_URL}}images/ms/0-1.jpg" data-pswp-src="{{S3_URL}}images/ms/0-1.jpg" data-pswp-width="640"
+                    data-pswp-height="853.33" target="_blank" class="ms-image">
+                    <img data-speed="0.9" src="{{S3_URL}}images/ms/0-1.jpg">
+                </a>
+
                 <img data-speed="1" src="{{S3_URL}}images/ms/0-2.jpg">
                 <img data-speed="1.1" src="{{S3_URL}}images/ms/0-3.jpg">
                 <img data-speed="0.9" src="{{S3_URL}}images/ms/0-4.jpg">
@@ -51,6 +59,16 @@
     <script src="{% static 'js/Observer.min.js' %}"></script>
     <script src="{% static 'js/SplitText.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
+
+    <script type="module">
+        import PhotoSwipeLightbox from "{% static 'js/photoswipe-lightbox.esm.js' %}";
+        const options = {
+            gallery: '.ms-image',
+            pswpModule: () => import("{% static 'js/photoswipe.esm.js' %}")
+        };
+        const lightbox = new PhotoSwipeLightbox(options);
+        lightbox.init();
+    </script>
 </body>
 
 </html>

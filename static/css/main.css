@@ -139,11 +139,11 @@ img {
   grid-area: 1/1/6/8;
 } */
 
-img:nth-child(1) {
+.ms-image:nth-child(1) {
   grid-area: 1/1/6/8;
 }
 
-img:nth-child(2) {
+.ms-image:nth-child(2) {
   grid-area: 3/12/8/20;
 }
 
@@ -164,7 +164,7 @@ img:nth-child(6) {
 }
 
 img:nth-child(7) {
-  grid-area: 22/11/24/20;
+  grid-area: 22/11/27/20;
 }
 
 @media (min-width: 320px) {
