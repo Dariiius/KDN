@@ -109,30 +109,10 @@ img {
   border-radius: 1em;
 }
 
-.section-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.ms-image {
+  display: block;
   width: 100%;
-
-  font-size: 1.5em;
-  color: #ffffffc7;
-  text-align: center;
-
-  position: relative;
-  font-family: "Unkempt", cursive;
-}
-
-.section-title::before,
-.section-title::after {
-    content: "";
-    flex: 1;
-    border-bottom: 2px solid #ffffff49;
-    margin: 0 1rem; /* space between line and text */
-}
-
-.section-title:nth-child(1) {
-  grid-area: 1 / 1 / 3 / 20;
+  height: 100%; 
 }
 
 /* img:nth-child(1) {
@@ -147,23 +127,23 @@ img {
   grid-area: 3/12/8/20;
 }
 
-img:nth-child(3) {
+.ms-image:nth-child(3) {
   grid-area: 9/5/13/15;
 }
 
-img:nth-child(4) {
+.ms-image:nth-child(4) {
   grid-area: 14/1/18/8;
 }
 
-img:nth-child(5) {
+.ms-image:nth-child(5) {
   grid-area: 16/12/20/19;
 }
 
-img:nth-child(6) {
+.ms-image:nth-child(6) {
   grid-area: 20/2/25/9;
 }
 
-img:nth-child(7) {
+.ms-image:nth-child(7) {
   grid-area: 22/11/27/20;
 }
 
@@ -198,4 +178,27 @@ img:nth-child(7) {
     font-size: 4rem;
     -webkit-text-stroke-width: 1.5px;
   }
+}
+
+/* Photoswipe */
+.pswp__custom-caption {
+  background: #ffffff00;
+  font-size: 0.8em;
+  color: #fff;
+  width: calc(100% - 32px);
+  max-width: 400px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  position: absolute;
+  left: 50%;
+  bottom: 3%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.pswp__custom-caption a {
+  color: #fff;
+  text-decoration: underline;
+}
+.hidden-caption-content {
+  display: none;
 }

@@ -25,20 +25,36 @@
         <section id="content">
             <section class="images">
                 <!-- <h5 class="section-title">New Born</h5> -->
-                <a href="#" data-pswp-src="{{S3_URL}}images/ms/0-0.jpg" data-pswp-width="560"
-                    data-pswp-height="746.66" target="_blank" class="ms-image">
-                    <img data-speed="0.8" src="{{S3_URL}}images/ms/0-0.jpg">
+                <a href="#" data-pswp-src="{{S3_URL}}images/ms/0-0.jpg" data-pswp-width="560" data-pswp-height="746.66"
+                    target="_blank" class="ms-image">
+                    <img data-speed="0.8" src="{{S3_URL}}images/ms/0-0.jpg" alt="DAY 1">
                 </a>
-                <a href="{{S3_URL}}images/ms/0-1.jpg" data-pswp-src="{{S3_URL}}images/ms/0-1.jpg" data-pswp-width="640"
-                    data-pswp-height="853.33" target="_blank" class="ms-image">
-                    <img data-speed="0.9" src="{{S3_URL}}images/ms/0-1.jpg">
+                <a href="{{S3_URL}}images/ms/0-1.jpg" data-pswp-src="{{S3_URL}}images/ms/0-1.jpg" data-pswp-width="560"
+                    data-pswp-height="746.66" target="_blank" class="ms-image">
+                    <img data-speed="0.9" src="{{S3_URL}}images/ms/0-1.jpg" alt="DAY 3">
+                </a>
+                <a href="{{S3_URL}}images/ms/0-4.jpg" data-pswp-src="{{S3_URL}}images/ms/0-4.jpg" data-pswp-width="560"
+                    data-pswp-height="746.66" target="_blank" class="ms-image">
+                    <img data-speed="1" src="{{S3_URL}}images/ms/0-4.jpg" alt="DAY 7">
+                </a>
+                <a href="{{S3_URL}}images/ms/0-3.jpg" data-pswp-src="{{S3_URL}}images/ms/0-3.jpg" data-pswp-width="560"
+                    data-pswp-height="746.66" target="_blank" class="ms-image">
+                    <img data-speed="1.1" src="{{S3_URL}}images/ms/0-3.jpg" alt="DAY 9">
+                </a>
+                <a href="{{S3_URL}}images/ms/0-2.jpg" data-pswp-src="{{S3_URL}}images/ms/0-2.jpg" data-pswp-width="560"
+                    data-pswp-height="746.66" target="_blank" class="ms-image">
+                    <img data-speed="0.9" src="{{S3_URL}}images/ms/0-2.jpg" alt="DAY 10">
+                </a>
+                <a href="{{S3_URL}}images/ms/0-5.jpg" data-pswp-src="{{S3_URL}}images/ms/0-5.jpg" data-pswp-width="560"
+                    data-pswp-height="746.66" target="_blank" class="ms-image">
+                    <img data-speed="1.2" src="{{S3_URL}}images/ms/0-5.jpg" alt="DAY 15">
+                </a>
+                <a href="{{S3_URL}}images/ms/0-6.jpg" data-pswp-src="{{S3_URL}}images/ms/0-6.jpg" data-pswp-width="560"
+                    data-pswp-height="746.66" target="_blank" class="ms-image">
+                    <img data-speed="0.8" src="{{S3_URL}}images/ms/0-6.jpg" alt="DAY 25">
                 </a>
 
-                <img data-speed="1" src="{{S3_URL}}images/ms/0-2.jpg">
-                <img data-speed="1.1" src="{{S3_URL}}images/ms/0-3.jpg">
-                <img data-speed="0.9" src="{{S3_URL}}images/ms/0-4.jpg">
-                <img data-speed="1.2" src="{{S3_URL}}images/ms/0-5.jpg">
-                <img data-speed="0.8" src="{{S3_URL}}images/ms/0-6.jpg">
+
                 <!-- <img data-speed="1" src="{{S3_URL}}images/ms/0-7.jpg"> -->
                 <!-- 
                 <img data-speed="1"
@@ -67,6 +83,32 @@
             pswpModule: () => import("{% static 'js/photoswipe.esm.js' %}")
         };
         const lightbox = new PhotoSwipeLightbox(options);
+        lightbox.on('uiRegister', function () {
+            lightbox.pswp.ui.registerElement({
+                name: 'custom-caption',
+                order: 9,
+                isButton: false,
+                appendTo: 'root',
+                html: 'Caption text',
+                onInit: (el, pswp) => {
+                    lightbox.pswp.on('change', () => {
+                        const currSlideElement = lightbox.pswp.currSlide.data.element;
+                        let captionHTML = '';
+                        if (currSlideElement) {
+                            const hiddenCaption = currSlideElement.querySelector('.hidden-caption-content');
+                            if (hiddenCaption) {
+                                // get caption from element with class hidden-caption-content
+                                captionHTML = hiddenCaption.innerHTML;
+                            } else {
+                                // get caption from alt attribute
+                                captionHTML = currSlideElement.querySelector('img').getAttribute('alt');
+                            }
+                        }
+                        el.innerHTML = captionHTML || '';
+                    });
+                }
+            });
+        });
         lightbox.init();
     </script>
 </body>
