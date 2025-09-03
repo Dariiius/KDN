@@ -34,7 +34,7 @@ body {
 
 .text {
   position: fixed;
-  top: 45vh;
+  top: 45dvh;
   font-weight: 900;
   font-style: normal;
   font-size: 4rem;
@@ -58,7 +58,7 @@ body {
 
 .subtext {
   position: fixed;
-  top: 50vh;
+  top: 50dvh;
   font-weight: 900;
   font-style: normal;
   font-size: 1.5rem;
@@ -79,12 +79,12 @@ body {
 }
 
 .images {
-  padding-top: 60vh;
+  padding-top: 60dvh;
   position: relative;
   width: 100%;
   max-width: 2000px;
   margin: 0 auto;
-  min-height: 150vh;
+  min-height: 150dvh;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(19, 4%);
