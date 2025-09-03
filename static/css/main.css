@@ -5,7 +5,6 @@
 
 body {
   margin: 0;
-  /* background-color: #1a1721; */
   background: radial-gradient(circle at 25% 25%, #978879 14%, #897561 15%, #897561 20%, transparent 21%, transparent 100%), radial-gradient(circle at 75% 75%, transparent 11%, #897561 12%, #897561 17%, transparent 18%);
   background-size: 4em 4em;
   background-color: #978879;
@@ -111,7 +110,6 @@ img {
 }
 
 .section-title {
-  grid-area: 1 / 1 / 3 / 20; /* Row 1–2, spanning all 19 columns */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,44 +131,36 @@ img {
     margin: 0 1rem; /* space between line and text */
 }
 
+.section-title:nth-child(1) {
+  grid-area: 1 / 1 / 3 / 20;
+}
+
 /* img:nth-child(1) {
   grid-area: 1/1/6/8;
 } */
 
 img:nth-child(2) {
-  grid-area: 7/1/18/9;
+  grid-area: 7/1/16/9;
 }
 
 img:nth-child(3) {
-  grid-area: 10/13/20/20;
+  grid-area: 7/11/16/20;
 }
 
 img:nth-child(4) {
-  grid-area: 20/3/27/10;
+  grid-area: 14/2/20/8;
 }
 
 img:nth-child(5) {
-  grid-area: 23/11/28/19;
+  grid-area: 13/10/17/20;
 }
 
 img:nth-child(6) {
-  grid-area: 20/2/25/9;
+  grid-area: 24/1/29/13;
 }
 
 img:nth-child(7) {
-  grid-area: 22/11/24/20;
-}
-
-img:nth-child(8) {
-  grid-area: 26/5/30/15;
-}
-
-img:nth-child(9) {
-  grid-area: 26/5/30/15;
-}
-
-img:nth-child(10) {
-  grid-area: 36/2/30/15;
+  grid-area: 17/14/21/20;
 }
 
 @media (min-width: 320px) {
